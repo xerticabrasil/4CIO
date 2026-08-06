@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4CIO Public Sectors | Xertica.ai</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            celeste: '#239EA6',
+                            magenta: '#C751A3',
+                            violeta: '#5E4694',
+                            marron: '#1A1715',
+                            light: '#FFFEF8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'swiss': '-0.02em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            background-color: #1A1715; /* Ensure html background is dark to prevent white bands during scroll/bounce */
+        }
+        
+        body {
+            background-color: #1A1715;
+            color: #FFFEF8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .brutalist-border {
+            border: 4px solid #FFFEF8;
+        }
+        
+        .brutalist-shadow-celeste {
+            box-shadow: 12px 12px 0px 0px #239EA6;
+        }
+        
+        .brutalist-shadow-magenta {
+            box-shadow: 12px 12px 0px 0px #C751A3;
+        }
+
+        /* Padrão de Grade Tecnológica para o Bloco Geométrico */
+        .tech-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255, 254, 248, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 254, 248, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+
+    <!-- Navegação -->
+    <nav class="w-full py-6 absolute top-0 z-50 border-b-2 border-brand-light/20 bg-brand-marron/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <img src="https://i.imgur.com/cVseTqH.jpeg" alt="Xertica.ai" class="h-8 md:h-10" onerror="this.src='https://placehold.co/100x40/1A1715/239EA6?text=Xertica'">
+            <div class="hidden md:flex gap-6 text-brand-light/80 font-bold tracking-swiss uppercase text-sm">
+                <a href="#superpowers" class="hover:text-brand-celeste transition-colors">AI Superpowers</a>
+                <a href="#fdm" class="hover:text-brand-magenta transition-colors">Arquitetura FDM</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow pt-24 md:pt-0 flex items-center min-h-[90vh] relative overflow-hidden bg-brand-marron">
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-6 md:px-12 z-10 py-12 lg:py-0">
+            
+            <!-- Conteúdo Esquerda -->
+            <div class="w-full lg:w-[60%] flex flex-col justify-center pr-0 lg:pr-12">
+                
+                <div class="inline-flex items-center gap-3 px-4 py-2 bg-brand-celeste text-brand-light border-2 border-brand-light shadow-[4px_4px_0px_0px_#FFFEF8] mb-8 w-max">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="text-[14px] font-bold uppercase tracking-swiss font-display">26 a 30 de Agosto • Foz do Iguaçu, PR</span>
+                </div>
+
+                <h1 class="text-[56px] md:text-[80px] font-black text-brand-light leading-[1.05] tracking-swiss font-display mb-6">
+                    4CIO PUBLIC SECTORS.
+                </h1>
+
+                <p class="text-[20px] md:text-[24px] text-brand-light/80 font-normal leading-[1.4] font-sans mb-10 max-w-2xl border-l-4 border-brand-magenta pl-6">
+                    IA aplicada à análise geoespacial e estruturação de dados. Descubra como a inteligência artificial está solucionando desafios complexos e acelerando a tomada de decisão no setor público.
+                </p>
+            </div>
+
+            <!-- Bloco Geométrico Estruturado (Direita) -->
+            <div class="w-full lg:w-[40%] flex justify-center lg:justify-end mt-12 lg:mt-0">
+                <div class="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px]">
+                    <!-- Quadrado Base (Magenta) -->
+                    <div class="absolute bottom-0 right-0 w-[85%] h-[85%] bg-brand-magenta brutalist-border tech-grid opacity-80"></div>
+                    <!-- Quadrado Sobreposto (Celeste) com offset rigoroso -->
+                    <div class="absolute top-0 left-0 w-[85%] h-[85%] bg-brand-celeste brutalist-border tech-grid flex items-end p-6 z-10 transition-transform hover:-translate-y-2 hover:-translate-x-2 duration-300">
+                        <div class="bg-brand-marron border-2 border-brand-light p-4 shadow-[4px_4px_0px_0px_#FFFEF8]">
+                            <p class="font-display font-bold text-brand-light text-xl uppercase tracking-swiss">Enatic 2026</p>
+                            <p class="font-sans text-brand-light/70 text-sm">Painel Exclusivo Xertica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Seção: O Gargalo Invisível & AI Superpowers -->
+    <section id="superpowers" class="w-full py-24 bg-brand-marron border-t-2 border-brand-light/10 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <!-- Contexto: Capability Overhang -->
+            <div class="mb-20 max-w-4xl">
+                <h2 class="text-[40px] md:text-[56px] font-black leading-[1.3] md:leading-[1.4] tracking-swiss font-display mb-8 text-brand-light">
+                    O gargalo invisível chamado <br class="hidden md:block">
+                    <span class="inline-block mt-3 md:mt-4 bg-brand-marron text-brand-light px-4 py-2 brutalist-border shadow-[6px_6px_0px_0px_#C751A3]">Capability Overhang.</span>
+                </h2>
+                <p class="text-[20px] md:text-[24px] font-sans leading-[1.5] mb-8 font-medium text-brand-light/90">
+                    Existe uma distância real entre a capacidade computacional que a IA já possui hoje e o quanto a sua operação realmente aplica na prática.
+                </p>
+                <p class="text-[18px] font-sans leading-[1.6] text-brand-light/70 border-l-4 border-brand-violeta pl-6">
+                    Enquanto sua organização opera na margem do uso prático, a capacidade tecnológica avança no vácuo. Esse espaço vazio é onde o seu crescimento está preso e a celeridade dos processos se perde em gargalos humanos.
+                </p>
+            </div>
+
+            <!-- ENFASE: AI SUPERPOWERS -->
+            <div class="bg-brand-marron text-brand-light p-8 md:p-12 brutalist-border brutalist-shadow-magenta relative overflow-hidden">
+                <!-- Fundo decorativo -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-magenta/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+                
+                <div class="relative z-10">
+                    <div class="inline-block px-4 py-1.5 bg-brand-celeste text-brand-marron border-2 border-brand-light mb-6 font-bold uppercase tracking-swiss text-sm">
+                        A Solução Estrutural
+                    </div>
+                    
+                    <h3 class="text-[36px] md:text-[52px] font-black leading-[1.1] tracking-swiss font-display mb-6">
+                        AI Superpowers:<br><span class="text-brand-magenta">O Multiplicador Operacional.</span>
+                    </h3>
+                    
+                    <p class="text-[20px] text-brand-light/90 font-sans leading-[1.5] mb-12 max-w-3xl">
+                        A solução não é contratar mais softwares. É usar a IA como a base estrutural para automatizar e acelerar toda a sua operação. Pegamos as tarefas mais lentas da sua rotina e usamos a IA como uma alavanca para <strong class="text-brand-celeste">exponenciar o resultado de toda a equipe</strong>.
+                    </p>
+
+                    <!-- Tabela Comparativa -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border-4 border-brand-light/30">
+                        
+                        <!-- Lado Ruim (Superficial) -->
+                        <div class="p-8 border-b-4 md:border-b-0 md:border-r-4 border-brand-light/30 bg-black/20">
+                            <h4 class="text-[24px] font-bold text-brand-light/50 mb-6 font-display uppercase tracking-swiss border-b-2 border-brand-light/10 pb-4">
+                                Adoção Superficial
+                            </h4>
+                            <ul class="space-y-5 text-[16px] text-brand-light/60 font-sans">
+                                <li class="flex items-start gap-4">
+                                    <span class="text-red-500 font-bold text-xl leading-none">×</span> 
+                                    <span>Adoção por <strong>Status</strong> e Relações Públicas.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-red-500 font-bold text-xl leading-none">×</span> 
+                                    <span>Ferramentas isoladas de chat para usos amplos e vagos.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-red-500 font-bold text-xl leading-none">×</span> 
+                                    <span>Resultado pífio: +10% de eficiência marginal.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Lado Bom (AI Superpowers) -->
+                        <div class="p-8 bg-brand-violeta/20">
+                            <h4 class="text-[28px] font-bold text-brand-celeste mb-6 font-display uppercase tracking-swiss border-b-2 border-brand-celeste/30 pb-4">
+                                AI Superpowers
+                            </h4>
+                            <ul class="space-y-5 text-[18px] text-brand-light font-sans font-medium">
+                                <li class="flex items-start gap-4">
+                                    <span class="text-brand-celeste font-bold text-xl leading-none">✓</span> 
+                                    <span>IA plugada diretamente na <strong>infraestrutura real</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-brand-celeste font-bold text-xl leading-none">✓</span> 
+                                    <span>Foco na resolução de <strong>gargalos diários específicos</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-brand-celeste font-bold text-xl leading-none">✓</span> 
+                                    <span>Resultados exponenciais: saltos de <strong>10x a 100x</strong>.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção: Arquitetura FDM -->
+    <section id="fdm" class="w-full py-24 bg-brand-marron relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="mb-16">
+                <h2 class="text-[40px] md:text-[56px] font-bold text-brand-light leading-[1.1] tracking-swiss font-display mb-4">
+                    FDM: Inteligência Agêntica.
+                </h2>
+                <p class="text-[20px] text-brand-light/70 max-w-3xl font-sans">
+                    Conversão de dados brutos e não estruturados (PDFs, vídeos, extrações forenses) em insumos pesquisáveis, operando em uma arquitetura robusta de 3 camadas para celeridade e segurança jurídica.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Camada 1 -->
+                <div class="bg-brand-marron brutalist-border p-8 hover:bg-brand-light hover:text-brand-marron transition-colors duration-300 group">
+                    <h3 class="text-[24px] font-bold mb-4 font-display tracking-swiss border-b-2 border-current pb-4">
+                        Camada de Infraestrutura
+                    </h3>
+                    <p class="text-[16px] font-sans opacity-80 leading-[1.6]">
+                        A fundação sólida. Microsserviços e contêineres no Google Cloud que sustentam processamento elástico, trânsito seguro e alta disponibilidade para dados massivos.
+                    </p>
+                </div>
+
+                <!-- Camada 2 -->
+                <div class="bg-brand-marron brutalist-border p-8 hover:bg-brand-celeste hover:text-brand-marron transition-colors duration-300 group">
+                    <h3 class="text-[24px] font-bold mb-4 font-display tracking-swiss border-b-2 border-current pb-4">
+                        Camada Ontológica
+                    </h3>
+                    <p class="text-[16px] font-sans opacity-80 leading-[1.6]">
+                        O cérebro semântico. Conversão da lei e do histórico decisório em regras computacionais. Extração de entidades complexas e estruturação precisa em grafos de conhecimento.
+                    </p>
+                </div>
+
+                <!-- Camada 3 -->
+                <div class="bg-brand-marron brutalist-border p-8 hover:bg-brand-magenta hover:text-brand-light transition-colors duration-300 group">
+                    <h3 class="text-[24px] font-bold mb-4 font-display tracking-swiss border-b-2 border-current pb-4">
+                        Camada Agêntica
+                    </h3>
+                    <p class="text-[16px] font-sans opacity-80 leading-[1.6]">
+                        A execução inteligente. Um Sistema Multi-Agente (MAS) operando em cadeia (Chain of Thought) para executar tarefas investigativas e administrativas complexas com precisão estrutural.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#110f0e] border-t-2 border-brand-light/10 py-12 text-center relative z-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            <img src="https://i.imgur.com/cVseTqH.jpeg" alt="Xertica.ai" class="h-8 mb-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300" onerror="this.src='https://placehold.co/100x40/110f0e/239EA6?text=Xertica'">
+            <p class="text-brand-light/40 text-[14px] font-sans">
+                © 2026 Xertica.ai. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
